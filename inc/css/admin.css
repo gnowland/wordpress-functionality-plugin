@@ -1,0 +1,37 @@
+/*
+ * TinyMCE
+ */
+/* Override "Formats" dropdown menu selection formatting */
+.mce-menu .mce-menu-item-preview .mce-text {
+  font-size: 1rem!important;
+}
+
+/*
+ * Media
+ */
+.media-frame select.attachment-filters {
+   max-width: 100%;
+}
+
+/*
+ * CMB2
+ */
+.cmb-type-file-list .cmb2-media-status .img-status {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+#side-sortables .cmb2-wrap>.cmb-field-list>.cmb-row, .inner-sidebar .cmb2-wrap>.cmb-field-list>.cmb-row {
+  padding: 0;
+}
+
+#side-sortables .cmb-type-file-list .cmb2-media-status .img-status img {
+  width: 105px;
+  height: 105px;
+}
+
+.cmb-type-checkbox span.cmb2-metabox-description {
+	color: inherit;
+	font-style: normal;
+}
