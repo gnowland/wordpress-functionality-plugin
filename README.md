@@ -12,3 +12,6 @@ See also: _[Why Custom Post Types Belong in Plugins](http://justintadlock.com/ar
 
 PHP Namespacing for dummies: Use `__NAMESPACE__ . '\\` to refer to function names in hooks, etc.:
 `add_action('hook_action_name', __NAMESPACE__ . '\\function_name');`
+
+### Setup
+Replace prefix '_sitename_' with domain of site.
