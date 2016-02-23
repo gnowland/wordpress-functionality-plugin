@@ -24,24 +24,45 @@ add_filter('upload_mimes', __NAMESPACE__ . '\\allow_upload_mime_types');
 /**
  *  Use the ite logo to replace the login logo, dynamically
  */
+// Enable header image upload
+function enable_logo_upload() {
+	add_theme_support( 'custom-header',
+	  array(
+	    //'default-image'          => get_template_directory_uri() . '/dist/images/logo.png',
+	    'width'                  => 0,
+	    'height'                 => 0,
+	    'flex-height'            => true,
+	    'flex-width'             => true,
+	    'uploads'                => true,
+	    'random-default'         => false,
+	    'header-text'            => false,
+	    'default-text-color'     => '',
+	    'wp-head-callback'       => '',
+	    'admin-head-callback'    => '',
+	    'admin-preview-callback' => ''
+	  )
+	);
+}
+add_action('after_setup_theme', __NAMESPACE__ . '\\enable_logo_upload');
+
 function login_image() {
-		if( function_exists('get_custom_header') ){
-				$width = get_custom_header()->width;
-				$height = get_custom_header()->height;
-		} else {
-				$width = HEADER_IMAGE_WIDTH;
-				$height = HEADER_IMAGE_HEIGHT;
+	if( function_exists('get_custom_header') ){
+			$width = get_custom_header()->width;
+			$height = get_custom_header()->height;
+	} else {
+			$width = HEADER_IMAGE_WIDTH;
+			$height = HEADER_IMAGE_HEIGHT;
+	}
+	echo '<style>
+		.login h1 a {
+			background-image: url( '; header_image(); echo ' ) !important;
+			width: 100%;
+			background-size: 100%;
 		}
-		echo '<style>
-			.login h1 a {
-				background-image: url( '; header_image(); echo ' ) !important;
-				width: 100%;
-				background-size: 100%;
-			}
-			.interim-login h1 a {
-				margin-bottom: 0;
-			}
-		</style>';
+		.interim-login h1 a {
+			margin-bottom: 0;
+		}
+	</style>';
 }
 add_action( 'login_head', __NAMESPACE__ . '\\login_image' );
 
