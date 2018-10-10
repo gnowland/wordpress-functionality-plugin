@@ -1,4 +1,4 @@
-<strong>WARNING: DEPRECATED! Active development of this plugin has been moved to https://github.com/gnowland/wp-jet-fuel. This repository will remain available for historical purposes only, no warranty of merchantability or expectation of servicability implied or otherwise.</strong>
+<strong>WARNING: DEPRECATED! Active development of this plugin has been moved to [gnowland/wp-jet-fuel](https://github.com/gnowland/wp-jet-fuel). This repository will remain available for historical purposes only, no warranty of merchantability or expectation of servicability implied or otherwise.</strong>
 
 <hr>
 
