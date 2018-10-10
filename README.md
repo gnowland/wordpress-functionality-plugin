@@ -1,5 +1,5 @@
 # Wordpress Functionality Plugin
-By Gifford Nowland <hi[at]giffordnowland.com>
+WARNING: DEPRECATED! Active development of this plugin has been moved to https://github.com/gnowland/wp-jet-fuel. This repository to remain available for historical purposes only, no warranty of merchantability or expectation of servicability implied or otherwise.
 
 Facilitates the addition of custom functionality to a WordPress website, including Custom Post Types, Meta Fields, Widgets, Taxonomies, Shortcodes, etc.
 
